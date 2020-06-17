@@ -1,0 +1,48 @@
+components:
+  schemas:
+    GithubToken:
+      type: object
+      properties:
+        clientId:
+          type: string
+        secretId:
+          type: string
+        code:
+          type: string
+       
+      example:
+        clientId: 5ebac534954b54139806c112
+        secretId: 5ebac534954b54139806c112
+        code: 5ebac534954b54139806c112
+
+
+
+    Error:
+      type: object
+      properties:
+        code:
+          type: number
+        message:
+          type: string
+
+  responses:
+
+    Forbidden:
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            code: 403
+            message: Forbidden
+    NotFound:
+      description: Not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            code: 404
+            message: Not found
+
