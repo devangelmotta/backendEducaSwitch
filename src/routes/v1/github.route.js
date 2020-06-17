@@ -1,5 +1,5 @@
 const express = require('express');
-const validate = require('../../middlewares/validate');
+const validate = require('../../middlewares/vaidate');
 const githubValidation = require('../../validations/github.validation');
 const githubController = require('../../controllers/github.controller');
 
