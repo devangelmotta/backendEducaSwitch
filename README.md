@@ -10,7 +10,7 @@ So there is this server that does the job of requesting the token from Github an
 Clone the repo:
 
 ```bash
-git clone https://github.com/LINKTOREPO <YOUR_FRIENDLY_NAME>
+git clone https://github.com/devangelmotta/backendEducaSwitch.git <YOUR_FRIENDLY_NAME>
 cd <YOUR_FRIENDLY_NAME>
 ```
 
@@ -47,19 +47,6 @@ yarn test:watch
 
 # run test coverage
 yarn coverage
-```
-
-Docker:
-
-```bash
-# run docker container in development mode
-yarn docker:dev
-
-# run docker container in production mode
-yarn docker:prod
-
-# run all tests in a docker container
-yarn docker:test
 ```
 
 Linting:
@@ -133,7 +120,7 @@ The validation schemas are defined in the `src/validations` directory and are us
 ```javascript
 const express = require('express');
 const validate = require('../../middlewares/validate');
-const userValidation = require('../../validations/user.validation');
+const userValidation = require('../../validations/github.validation');
 
 const router = express.Router();
 
